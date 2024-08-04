@@ -9,7 +9,6 @@ import GetStarted from "../components/GetStarted/GetStarted"
 const Websites = () => {
     return (
         <div className="App">
-
             <Hero />
             <Companies />
             <Residencies />

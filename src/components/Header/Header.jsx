@@ -13,32 +13,27 @@ const Header = () => {
   return (
     <section className="h-wrapper bg-black ">
       <div className="flex justify-between p-5 px-8 text-white max-w-screen-xl mx-auto">
-        {/* logo */}
-        <img src="./logo.png" alt="logo" width={100} />
+        <Link to="/"> <img src="./logo.png" alt="logo" width={100} /></Link>
 
-        {/* menu */}
         <OutsideClickHandler
           onOutsideClick={() => {
             setMenuOpened(false);
           }}
         >
           <div
-            // ref={menuRef}
             className="flexCenter h-menu"
             style={getMenuStyles(menuOpened)}
           >
-            <Link to="/">Home</Link>
-            <Link to="/">Home</Link>
-            <Link to="/">Home</Link>
-            <Link to="/">Home</Link>
+            <Link to="/properties">Properties</Link>
+            <Link to="/contact">Contact</Link>
+
 
             <button className="button">
-              <a href="mailto:rahulverma281202@gmail.com">Contact</a>
+              <Link to="/login">Login</Link>
             </button>
           </div>
         </OutsideClickHandler>
 
-        {/* for medium and small screens */}
         <div
           className="menu-icon"
           onClick={() => setMenuOpened((prev) => !prev)}
